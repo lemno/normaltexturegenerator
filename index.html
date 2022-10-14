@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Normal Texture Generator</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="res/style.css">
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
+</script>
+<script src="res/convert-normals.js?a=155"></script>
+</head>
+
+<body>
+
+	<div class="darken"></div>
+
+	<div class="mainbox uploader" style="display: none;">
+		<div class="header">Normal Texture Generator</div>
+		<div class="help-text">
+		Find the transparent .png of your tattoo. It should have the tattoo layout, but on a transparent background instead of skin.
+		</div>
+		<div id="drop-area">Click here to select or drag a file to convert</div>
+		<div class="footer">This conversion happens locally. Your file is not uploaded anywhere.</div>
+		<input type="file" id="fileinput" accept="image/png"/>
+	</div>
+
+	<div class="mainbox done" style="display: none;">
+		<div class="header">Done!</div>
+		<div class="help-text">This file will be your normal texture. Follow the instructions on the mod page. If the download is missing, save it from this link: </div>
+		<a id="output-placeholder">
+			<div class="output-link">compatible_n.png</div>
+		</a>
+		<div class="footer">Refresh this page if you need to convert another texture.</div>
+	</div>
+
+	<div class="mainbox error" style="display: none;">
+		<div class="error-wrap">
+			<div class="header">Something went wrong</div>
+			<div class="help-text">Refresh this page to start over and try again.</div>
+		</div>
+	</div>
+
+	<img id="check" style="display: none;"></img>
+
+</body>
