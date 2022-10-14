@@ -6,7 +6,7 @@ Caman.Filter.register("createnormal", function () {
 
 		rgba.r = 127;
 		rgba.g = 127;
-		rgba.b = 255 - rgba.a;
+		rgba.b = rgba.a;
 		rgba.a = 255;
 
 		// Return the modified RGB values
